@@ -4,16 +4,16 @@ phases:
   install:
     commands:
       - echo Installing dependencies...
-      - pip install -r app/requirements.txt
 
   pre_build:
     commands:
-      - echo Logging in to Docker Hub (optional)
+      - echo Starting Docker...
+      - docker info
 
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t mi-app .
+      - docker build -t mi-app ./app
 
   post_build:
     commands:
