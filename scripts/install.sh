@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/app
+cd /home/ubuntu/app/app
 
 docker stop flask-app || true
 docker rm flask-app || true
