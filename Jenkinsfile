@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar código') {
-            steps {
-                git 'https://github.com/0bby1/mi-repositorio-devops.git'
-            }
-        }
-
         stage('Build Docker') {
             steps {
                 sh 'docker build -t mi-app ./app'
